@@ -18,18 +18,12 @@ a series of experiments have been conducted to check the accuracy of the convers
 - Pytorch Conversion repo:  https://github.com/nghuyong/ERNIE-Pytorch
 
 ## How to use
-If you want to use ernie-3.0 series models, you need to add `task_type_id` to BERT model following this [MR](https://github.com/huggingface/transformers/pull/18686/files) 
-**OR** you can re-install the transformers from my changed branch.
-```bash
-pip uninstall transformers # optional
-pip install git+https://github.com/nghuyong/transformers@add_task_type_id # reinstall
-```
 Then you can load ERNIE-3.0 model as before:
 ```Python
-from transformers import BertTokenizer, BertModel
+from transformers import BertTokenizer, ErnieForMaskedLM
 
 tokenizer = BertTokenizer.from_pretrained("nghuyong/ernie-3.0-base-zh")
-model = BertModel.from_pretrained("nghuyong/ernie-3.0-base-zh")
+model = ErnieForMaskedLM.from_pretrained("nghuyong/ernie-3.0-base-zh")
 ```
 
 ## Citation

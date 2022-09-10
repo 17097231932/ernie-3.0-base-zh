@@ -11,11 +11,10 @@
     "type_vocab_size": 4,
     "use_task_id": true,
     "vocab_size": 40000,
-    "init_class": "ErnieModel",
     "layer_norm_eps": 1e-05,
-    "model_type": "bert",
+    "model_type": "ernie",
     "architectures": [
-        "BertForMaskedLM"
+        "ErnieForMaskedLM"
     ],
     "intermediate_size": 3072
 }
